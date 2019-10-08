@@ -1,0 +1,9 @@
+.app-header{
+    display:flex;
+    flex-direction:row;
+    font-size: 22px;
+    color: white;
+    justify-content: space-between;
+    padding:1rem;
+    background-color:#005d61;
+}
