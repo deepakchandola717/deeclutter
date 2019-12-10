@@ -1,9 +1,18 @@
 import React from 'react';
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+import { withStyles } from '@material-ui/core/styles';
 import BackIcon from '../Data/back.svg';
+
+const AddButton = withStyles({
+    root:{
+      border: '1px solid grey',
+      fontSize:20,
+      width:'30%'
+    }
+})(Button)
+
 
 const BootstrapButton = withStyles({
     root: {
@@ -43,44 +52,43 @@ const BootstrapButton = withStyles({
     },
   })(Button);
 
-const NewNote = () => {
+
+const NewList = () => {
     return ( 
         <>
         <div className="app-header" style={{justifyContent:'start'}}>
         <img src={BackIcon} style={{marginRight:'3rem'}} alt="Back"/>
-        <span style={{fontSize:'18px'}}>Add Note</span>
+        <span style={{fontSize:'18px'}}>Create a List</span>
         </div>
         <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around', margin:'1rem', alignItems:'center'}}>
-            {/* <span style={{fontSize:'2rem'}}>Title</span> */}
             <TextField
-                style={{width:'70%', margin:'1rem'}}
+                style={{width:'85%', margin:'1rem'}}
                 placeholder="Title"
+                // variant="outlined"
             />
+            <div style={{width:'90%', margin:'1rem'}}>
             <TextField
-                id="standard-multiline-static"
-                label="Note"
-                multiline
-                rows="12"
-                // defaultValue="Your note"
+                
+                placeholder="Item"
                 variant="outlined"
-                style={{margin:'1rem', width:'70%'}}
             />
+            </div>
+            
+            <AddButton>+</AddButton>
             <TextField
             id="standard-multiline-static"
             label="Description"
             multiline
             rows="4"
             // rowsMax="5"
-            defaultValue="my note"
+            defaultValue="my list"
             variant="outlined"
             style={{ margin:'1rem', width:'80%' }}
         />
+        <BootstrapButton  variant="contained" color="primary" disableRipple >Save</BootstrapButton>
         </div>
-        <BootstrapButton variant="contained" color="primary" disableRipple>
-              Save
-      </BootstrapButton>
         </>
      );
 }
  
-export default NewNote;
+export default NewList;

@@ -196,7 +196,7 @@ const ActionList = () => {
                     </ListItem>
                     <ListItem>
                         <ListItemIcon><ListRoundedIcon/></ListItemIcon>
-                        <ListItemText primary={"List"}/>
+                        <Link to="/newlist"><ListItemText primary={"List"}/></Link>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon><EventNoteRoundedIcon/></ListItemIcon>
