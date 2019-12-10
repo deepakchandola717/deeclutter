@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 
 import { withStyles } from '@material-ui/core/styles';
 import BackIcon from '../Data/back.svg';
+import CloseIcon from '../Data/close.svg';
 
 const AddButton = withStyles({
     root:{
@@ -66,12 +67,13 @@ const NewList = () => {
                 placeholder="Title"
                 // variant="outlined"
             />
-            <div style={{width:'90%', margin:'1rem'}}>
+            <div style={{display:'flex', width:'90%', margin:'1rem', justifyContent:'center'}}>
             <TextField
                 
                 placeholder="Item"
                 variant="outlined"
             />
+            <img src={CloseIcon} alt="delete"/>
             </div>
             
             <AddButton>+</AddButton>
