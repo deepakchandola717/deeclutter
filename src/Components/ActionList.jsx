@@ -1,13 +1,17 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+ 
 import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+
+import Avatar from '@material-ui/core/Avatar';
 
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
@@ -109,10 +113,14 @@ const ActionList = () => {
                     onKeyDown={setMenu}
                     className={classes.list}
                 >   
-                    <div style={{font:'25px', fontWeight:600, color:'#005d61', margin:'1rem'}}>
+                    <div style={{display:'flex', font:'25px', fontWeight:600, color:'#005d61', margin:'1rem'}}>
                         deeClutter
                     </div>
                     <Divider/>
+                    {/* <div style={{display:'flex', font:'25px', fontWeight:600, color:'#005d61', margin:'1rem', alignItems:'center', justifyContent:'space-around'}}>
+                        <Avatar style={{backgroundColor:'#005d61'}}>DC</Avatar>Deepak Chandola
+                    </div>
+                    <Divider/> */}
                     <List>
                         <ListItem button key={"View All"}>
                             <ListItemIcon><ViewListRoundedIcon/></ListItemIcon>
@@ -144,7 +152,7 @@ const ActionList = () => {
                     <List>
                         <ListItem button key={"Log Out"}>
                             <ListItemIcon><ExitToAppRoundedIcon/></ListItemIcon>
-                            <ListItemText primary={"LOG OUT"}/>
+                            <ListItemText primary={"Log Out"}/>
                         </ListItem>
                     </List>
 
@@ -164,9 +172,9 @@ const ActionList = () => {
             <div className="action-container">
             
 
-            <Drawer open={openMenu} onClose={setMenu}>
+            <SwipeableDrawer open={openMenu} onClose={setMenu}>
                 {MenuOptions()}
-            </Drawer>
+            </SwipeableDrawer>
 
             {/* {More OPTIONS} */}
             <Menu open={openMore} onClose={setMore} anchorEl={anchorEl}>
@@ -184,19 +192,19 @@ const ActionList = () => {
                 <List>
                     <ListItem>
                         <ListItemIcon><NotesRoundedIcon/></ListItemIcon>
-                        <ListItemText primary={"NOTE"} />
+                        <Link to="/newnote"><ListItemText primary={"Note"} /></Link>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon><ListRoundedIcon/></ListItemIcon>
-                        <ListItemText primary={"LIST"}/>
+                        <ListItemText primary={"List"}/>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon><EventNoteRoundedIcon/></ListItemIcon>
-                        <ListItemText primary={"EVENT"}/>
+                        <ListItemText primary={"Event"}/>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon><LinkRoundedIcon/></ListItemIcon>
-                        <ListItemText primary={"LINK"}/>
+                        <ListItemText primary={"Link"}/>
                     </ListItem>
                 </List>
             </Dialog>
