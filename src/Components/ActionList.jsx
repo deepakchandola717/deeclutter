@@ -101,6 +101,11 @@ const ActionList = () => {
         setOpenDialog(!currentDialogState)
     }
 
+    // Link Style
+    const LinkStyle={
+        textDecoration:'none',
+        color:'black'
+    }
 
     //Drawer Menu Contents
 
@@ -190,22 +195,30 @@ const ActionList = () => {
             <Dialog open={openDialog} onClose={setDialog}>
                 <DialogTitle>What is New Action</DialogTitle>
                 <List>
+                <Link style={LinkStyle} to="/newnote">
                     <ListItem>
                         <ListItemIcon><NotesRoundedIcon/></ListItemIcon>
-                        <Link to="/newnote"><ListItemText primary={"Note"} /></Link>
+                        <ListItemText primary={"Note"} />
                     </ListItem>
+                </Link>
+                    <Link style={LinkStyle} to="/newlist">
                     <ListItem>
                         <ListItemIcon><ListRoundedIcon/></ListItemIcon>
-                        <Link to="/newlist"><ListItemText primary={"List"}/></Link>
+                        <ListItemText primary={"List"}/>
                     </ListItem>
+                </Link>
+                    <Link style={LinkStyle} to="/newevent">
                     <ListItem>
                         <ListItemIcon><EventNoteRoundedIcon/></ListItemIcon>
-                        <Link to="/newevent"><ListItemText primary={"Event"}/></Link>
+                        <ListItemText primary={"Event"}/>
                     </ListItem>
+                    </Link>
+                    <Link style={LinkStyle} to="/newlink">
                     <ListItem>
                         <ListItemIcon><LinkRoundedIcon/></ListItemIcon>
                         <ListItemText primary={"Link"}/>
                     </ListItem>
+                    </Link>
                 </List>
             </Dialog>
 
