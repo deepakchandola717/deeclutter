@@ -8,8 +8,8 @@ const useStyles = makeStyles(theme => ({
     textField: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
-      color:'white',
-      borderColor:'white',
+    //   color:'white',
+    //   borderColor:'white',
     },
     button: {
         margin: theme.spacing(1),

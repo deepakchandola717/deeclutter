@@ -11,8 +11,6 @@ import ListItem from '@material-ui/core/ListItem';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
-import Avatar from '@material-ui/core/Avatar';
-
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 
@@ -183,7 +181,7 @@ const ActionList = () => {
 
             {/* {More OPTIONS} */}
             <Menu open={openMore} onClose={setMore} anchorEl={anchorEl}>
-                <MenuItem>Your Profile</MenuItem>
+                <MenuItem><Link style={LinkStyle} to="/yourprofile">Your Profile</Link></MenuItem>
                 <MenuItem>Settings</MenuItem>
                 <MenuItem>Know More</MenuItem>
             </Menu>

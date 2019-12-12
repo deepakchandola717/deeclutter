@@ -9,6 +9,7 @@ import NewNote from './Components/NewNote';
 import NewList from './Components/NewList';
 import NewEvent from './Components/NewEvent';
 import NewLink from './Components/NewLink';
+import YourProfile from './Components/YourProfile';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/newlist' exact component ={NewList} />
           <Route path='/newevent' exact component = {NewEvent} />
           <Route path='/newlink' exact component ={NewLink} />
+          <Route path='/yourprofile' exact component ={YourProfile}/>
         </Switch>
       </Router>
     </div>

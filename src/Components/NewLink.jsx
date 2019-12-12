@@ -62,7 +62,7 @@ const NewLink = () => {
 
         <div className="app-header" style={{justifyContent:'start'}}>
         <img src={BackIcon} style={{marginRight:'3rem'}} alt="Back"/>
-        <span style={{fontSize:'18px'}}>Create a List</span>
+        <span style={{fontSize:'18px'}}>Save Links</span>
         </div>
         <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around', margin:'1rem', alignItems:'center'}}>
             <div style={{display:'flex', width:'90%', margin:'1rem', justifyContent:'center'}}>
