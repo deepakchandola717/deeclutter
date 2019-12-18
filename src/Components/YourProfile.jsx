@@ -6,7 +6,7 @@ import EmailIcon from '../Data/email.svg';
 
 const YourProfile = () => {
     const entryStyle={
-        display:'grid', gridTemplateRows:'1', gridTemplateColumns:'1fr 4fr', justifyItems:'start', width:'60vw', border:'solid black 1px', borderRadius:'1rem', margin:'0.5rem', padding:'0.5rem 0.5rem', alignSelf:'center'
+        display:'grid', gridTemplateRows:'1', gridTemplateColumns:'1fr 4fr', justifyItems:'start', width:'75vw', border:'solid black 1px', borderRadius:'1rem', margin:'0.5rem', padding:'0.5rem 0.5rem', alignSelf:'center'
     }
     return ( 
         <>

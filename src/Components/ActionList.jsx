@@ -182,8 +182,8 @@ const ActionList = () => {
             {/* {More OPTIONS} */}
             <Menu open={openMore} onClose={setMore} anchorEl={anchorEl}>
                 <MenuItem><Link style={LinkStyle} to="/yourprofile">Your Profile</Link></MenuItem>
-                <MenuItem>Settings</MenuItem>
-                <MenuItem>Know More</MenuItem>
+                <MenuItem><Link style={LinkStyle} to="/settings">Settings</Link></MenuItem>
+                <MenuItem><Link style={LinkStyle} to="/knowmore">Know More</Link></MenuItem>
             </Menu>
 
             <Fab color="primary" aria-label="add" className={classes.fab} onClick={setDialog}>
