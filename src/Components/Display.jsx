@@ -27,9 +27,11 @@ const data=[
 const Display = () => {
     return ( 
         <>
+        <div style={{height:'85vh', overflow:'scroll'}}>
         {data.map(item=>{
-        <div>{item.title}</div>
+        return <div style={{border:'solid black 1px', margin:'0.5rem', padding:'1rem'}}><span>{item.title}</span></div>
         })}
+        </div>
         </>
      );
 }
